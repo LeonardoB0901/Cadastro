@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Login</title>
+    
+    <style>
+        body {
+            background: #f2f2f2; /* Cor de fundo suave */
+            font-family: sans-serif;
+            font-size: 16px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        form {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 300px; /* Largura fixa para o formulário */
+        }
+
+        p {
+            margin: 10px 0; 
+        }
+
+        button {
+            background-color: #4CAF50; /* Verde */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            width: 100%; /* Largura total para o botão */
+        }
+
+        button:hover {
+            background-color: #45a049; /* Verde mais escuro ao passar o mouse */
+        }
+
+        input, select {
+            width: 100%; /* Largura total */
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+            transition: border-color 0.3s;
+            box-sizing: border-box; /* Inclui bordas e preenchimentos na largura total */
+        }
+        
+        input:focus, select:focus {
+            border-color: #4CAF50; /* Mudança de cor ao focar */
+            outline: none; /* Remove contorno padrão */
+        }
+        
+        label {
+            color: black;
+            font-family: sans-serif;
+            display: block; /* Faz o label ocupar uma linha inteira */
+            margin: 10px 0 5px; /* Adiciona margem entre o label e o input */
+        }
+
+    </style>
+</head>
+<body>
+  <form>
+    <label for="usuario">Nome</label>
+    <input name="usuario" type="text" required>
+
+    <label for="Email">E-mail</label>
+    <input name="Email" type="email" required>
+
+    <label for="senha">Senha</label>
+    <input name="senha" type="password" required minlength="6">
+
+    <label for="confirmar-senha">Confirmar senha</label>
+    <input name="confirmar-senha" type="password" required minlength="6">
+
+    <label for="perfilusuarios">Perfil de Usuário</label>
+    <select name="perfilusuarios" id="perfilusuarios" required>
+      <option value="professor">Professor</option>
+      <option value="administrador">Administrador</option>
+      <option value="jogador">Jogador</option>
+    </select>
+
+    <p>
+      <button type="submit">Confirmar Cadastro</button>
+    </p>
+</form>
+</body>
+</html>
